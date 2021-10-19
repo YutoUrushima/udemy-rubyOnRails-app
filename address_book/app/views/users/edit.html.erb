@@ -1,2 +1,17 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<h1>編集</h1>
+<%= form_for(@user) do |f| %>
+<p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+    <% if @user.errors.any? %>
+        <%= @user.errors.messages[:name][0] %>
+    <% end %>
+</p>
+<p>
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+</p>
+<p>
+    <%= f.submit %>
+</p>
+<% end %>
