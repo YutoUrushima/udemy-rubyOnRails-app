@@ -3,6 +3,9 @@
 <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
+    <% if @user.errors.any? %>
+        <%= @user.errors.messages[:name][0] %>
+    <% end %>
 </p>
 <p>
     <%= f.label :phone %><br>
