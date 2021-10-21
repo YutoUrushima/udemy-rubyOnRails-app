@@ -6,6 +6,7 @@
     <%= u.phone %>
     <%= link_to "[詳細]", user_path(u.id) %>
     <%= link_to "[編集]", edit_user_path(u.id) %>
+    <%= link_to "[削除]", user_path(u.id), method: :delete, data: {confirm: "削除してもいいですか？"} %>
 </p>
 <% end %>
 <p>
